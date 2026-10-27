@@ -28,11 +28,20 @@ VendettaOS intenta seguir algunos principios:
 
 La intención es que las herramientas puedan utilizarse de manera independiente desde la terminal y desde una futura interfaz unificada, si una herramienta no funciona o la GUI/CLI tiene un error tener una alternativa para poder seguir operando
 
-## Licencia 
+## Licencia
 
-Aún no he seleccionado la licencia... pero pienso hacerlo de código abierto y ver si lo puedo hacer libre
+VendettaOS es software libre distribuido bajo la
+**GNU General Public License v3.0**
 
-Hasta que se añada un archivo LICENSE, no debe asumirse una licencia específica para reutilizar, modificar o redistribuir el proyecto.
+Puedes estudiar, modificar y compartir el proyecto bajo los términos de esta licencia
+
+Si distribuyes una versión modificada, deberás conservar la misma licencia, indicar los cambios realizados y proporcionar el código fuente correspondiente
+
+La intención es: si VendettaOS te da libertad para aprender, modificar y construir, las personas que reciban una versión derivada también deben conservar esas libertades
+
+Consulta el archivo [LICENSE](LICENSE) para leer los términos completos
+
+SPDX: `GPL-3.0-only`
 
 ## Contribuciones y comunicación
 
