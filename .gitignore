@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Editores e IDE
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Casos generados por VCM
+vendetta_cases/
+casos/
+cases/
+
+# Paquetes de casos
+*.vcase
+
+# Imágenes y evidencia forense
+*.img
+*.raw
+*.dd
+*.E01
+*.e01
+*.aff
+*.aff4
+
+# Secretos y configuración personal
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
