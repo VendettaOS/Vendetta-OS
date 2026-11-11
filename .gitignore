@@ -21,7 +21,6 @@ Thumbs.db
 # Casos generados por VCM
 vendetta_cases/
 casos/
-cases/
 
 # Paquetes de casos
 *.vcase
