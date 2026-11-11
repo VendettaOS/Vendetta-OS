@@ -9,7 +9,7 @@ def utc_now():
 
 def next_record_id(records, prefix, field):
     if not PREFIX_RE.fullmatch(prefix):
-        raise VCMError("Prefijo de registro inválido.")
+        raise VCMError("Prefijo de registro inválido...")
     highest = 0
     marker = prefix + "-"
     for record in records:
@@ -21,7 +21,7 @@ def next_record_id(records, prefix, field):
 def require_text(value, field):
     cleaned = str(value).strip()
     if not cleaned:
-        raise VCMError(f"{field} no puede estar vacío.")
+        raise VCMError(f"{field} no puede estar vacío...")
     if any(char in cleaned for char in "\r\n\t"):
-        raise VCMError(f"{field} no puede contener saltos de línea ni tabuladores.")
+        raise VCMError(f"{field} no puede contener saltos de línea ni tabuladores...")
     return cleaned

@@ -1,0 +1,1 @@
+"""Herramientas modulares incluidas en Vendetta Case Manager"""

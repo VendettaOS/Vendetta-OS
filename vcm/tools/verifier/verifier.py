@@ -13,7 +13,7 @@ LENGTHS = {"md5":32, "sha1":40, "sha256":64, "sha384":96, "sha512":128, "sha3_25
 def compute_hash(path, algorithm="sha256"):
     path = Path(path).expanduser().resolve()
     if algorithm not in ALGORITHMS: raise VCMError(f"Algoritmo no soportado: {algorithm}")
-    if algorithm in LEGACY: print(f"Advertencia: {algorithm.upper()} es heredado; usa SHA-256 para evidencia nueva.", file=sys.stderr)
+    if algorithm in LEGACY: print(f"Advertencia: {algorithm.upper()} es heredado y usa SHA-256 para evidencia nueva...", file=sys.stderr)
     try:
         before = path.stat()
         if not path.is_file(): raise VCMError(f"No es un archivo regular: {path}")
@@ -30,9 +30,9 @@ def normalize_expected(value, algorithm):
     value = value.strip().lower()
     prefix = f"{algorithm}:"
     if value.startswith(prefix): value = value[len(prefix):].strip()
-    if len(value) != LENGTHS[algorithm]: raise VCMError(f"Longitud inválida para {algorithm.upper()}.")
+    if len(value) != LENGTHS[algorithm]: raise VCMError(f"Longitud inválida para {algorithm.upper()}")
     try: bytes.fromhex(value)
-    except ValueError as exc: raise VCMError("El hash esperado debe ser hexadecimal.") from exc
+    except ValueError as exc: raise VCMError("El hash esperado debe ser hexadecimal...") from exc
     return value
 
 def verify_hash(path, expected, algorithm="sha256"):

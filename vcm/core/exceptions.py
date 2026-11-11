@@ -1,8 +1,8 @@
 class VCMError(Exception):
-    """Error esperado del Vendetta Case Manager."""
+    """Error esperado de Vendetta Case Manager..."""
 
 class ManifestError(VCMError):
-    """Manifiesto ausente, dañado o incompatible."""
+    """Manifiesto ausente, dañado o incompatible..."""
 
 class FileChangedError(VCMError):
-    """Un archivo cambió mientras era leído."""
+    """Un archivo cambió mientras era leído..."""

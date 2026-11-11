@@ -19,7 +19,7 @@ def main(argv=None):
             return 0
         result, match = verify_hash(args.file, args.expected_hash, args.algorithm)
         data = result.to_dict() | {"match": match}
-        print(json.dumps(data, ensure_ascii=False) if args.json else ("Integridad verificada. (YEEEEI!)" if match else "Fallo de integridad. (Buuuu...)"))
+        print(json.dumps(data, ensure_ascii=False) if args.json else ("Integridad verificada!" if match else "Fallo de integridad..."))
         return 0 if match else 1
     except VCMError as exc:
         print(f"Error: {exc}", file=sys.stderr); return 3
